@@ -1,0 +1,83 @@
+<div>
+	<h1 id="Title">Zadanie Serwisowe</h1>
+</div>
+
+<%= render partial: "navbar" %>
+<br>
+
+<div style="text-align: center; color: black;">
+	<table>
+		<tr>
+			<td class="show_td" style="width: 125px;">
+				Data zgłoszenia
+			</td>
+			<td style="width: 350px;">
+				<%= @service.data_zgloszenia.strftime("%d-%a-%Y") %>
+			</td>
+		</tr>
+		<tr>
+			<td class="show_td">
+				Numer
+			</td>
+			<td>
+				<%= @service.numer %>
+			</td>
+		</tr>
+		<tr>
+			<td class="show_td">
+				Status
+			</td>
+			<td>
+				<%= @service.status %>
+			</td>
+		</tr>
+		<tr>
+			<td class="show_td">
+				Osoba
+			</td>
+			<td>
+				<%= @service.przydzial %>
+			</td>
+		</tr>
+		<tr>
+			<td class="show_td">
+				Klient
+			</td>
+			<td>
+				<%= @service.klient %>
+			</td>
+		</tr>
+		<tr>
+			<td class="show_td">
+				Miasto
+			</td>
+			<td>
+				<%= @service.miasto %>
+			</td>
+		</tr>
+		<tr>
+			<td class="show_td">
+				Opis
+			</td>
+			<td >
+				<%= @service.opis %>
+			</td>
+		</tr>
+	</table>
+</div>
+<br>
+<div style="margin: auto; padding: 0; text-align: center; width: 295px;">
+	
+	<div id="button_foot">
+		<%= button_to("Zakończ", koniec_path(@service), method: :get )%>
+	</div>
+	<div id="button_foot">
+		<%= button_to("Edytuj", edit_service_path(@service), method: :get) %>
+	</div>
+	<div id="button_foot">
+		<%= render partial: "bottom_buttons" %>
+	</div>
+	<div style="clear: both; margin: 0; padding: 0;">
+	</div>
+	
+</div>

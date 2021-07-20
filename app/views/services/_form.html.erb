@@ -1,0 +1,68 @@
+
+<div class="form_container">
+	<div class="form">
+		<%= form_with model: servicer do |form| %>
+			<div>
+				<%= form.label :data_zgloszenia, "Data Zgłoszenia" %><br>
+				<%= form.date_field :data_zgloszenia %>
+				<% servicer.errors.full_messages_for(:data_zgloszenia).each do |mess| %>
+				<div class="err_mess"><%= mess %></div>
+				<% end %>
+			</div>
+			<br>
+			<div>
+				<%= form.label :numer, "Numer Zgłoszenia" %><br>
+				<%= form.text_field :numer %>
+				<% servicer.errors.full_messages_for(:numer).each do |mess| %>
+				<div class="err_mess"><%= mess %></div>
+				<% end %>
+			</div>
+			<br>
+			<div>
+				<%= form.label :status, "Status" %><br>
+				<%= form.select :status, @stat.values %>
+
+				<% servicer.errors.full_messages_for(:status).each do |mess| %>
+				<div class="err_mess"><%= mess %></div>
+				<% end %>
+			</div>
+			<br>
+			<div>
+				<%= form.label :przydzial, "Przydział" %><br>
+				
+				<%= form.select :przydzial, @techs.values %>
+				<%#= form.text_field :przydzial %>
+				<%# service.errors.full_messages_for(:przydzial).each do |mess| %>
+				<div class="err_mess"><%#= mess %></div>
+				<%# end %>
+			</div>
+			<br>
+			<div>
+				<%= form.label :klient, "Klient" %>
+				<br>
+				<%= form.text_field :klient %>
+				<% servicer.errors.full_messages_for(:klient).each do |mess| %>
+				<div class="err_mess"><%= mess %></div>
+				<% end %>
+			</div>
+			<br>
+			<div>
+				<%= form.label :miasto, "Miasto" %><br>
+				<%= form.text_field :miasto %>
+				<% servicer.errors.full_messages_for(:miasto).each do |mess| %>
+				<div class="err_mess"><%= mess %></div>
+				<% end %>
+			</div>
+			<br>
+			<div>
+				<%= form.label :opis, "Opis Zgłoszenia" %>
+				<br>
+				<%= form.text_area :opis, cols:48, rows:8 %>
+			</div>
+			<br>
+			<div>
+				<%= form.submit "Zatwierdź" %>	
+			</div>			
+		<% end %>		
+	</div>
+</div>

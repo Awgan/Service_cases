@@ -1,0 +1,24 @@
+
+	<div class="nav">
+		<ul>
+			<li id="nav_first_li">
+				<%= link_to "Strona Główna", "/" %>
+			</li>
+
+			<li id="nav_first_li">
+				<%= link_to "Nowy", "/services/new" %>
+				<ul>
+					<li><%= link_to "Szablon", "/services/new" %></li>
+					<li><%= link_to "z Pliku", "/file_read" %>
+				</ul>		
+			</li>
+			<li id="nav_first_li">
+				<%= link_to "Podsumowanie", week_summary_email_path, method: :post %>
+			</li>
+			<li id="nav_first_li">
+				<%= link_to "Logowanie", "/logowanie" %>
+			</li>
+			<div style="clear: both;">
+			</div>
+		</ul>
+	</div>

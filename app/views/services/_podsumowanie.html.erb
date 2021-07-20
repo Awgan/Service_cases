@@ -1,0 +1,14 @@
+<div style="margin: auto; width: 450px; color: white;">
+	
+	<%= form_with  model: @service, method: :delete do |junk| %>
+		<h2><%= @service.numer %></h2>
+		<%= junk.label("Podsumowanie Działań Serwisu", {style: "font-size: 16px; color: white;"}) %>
+		<br>
+		<br>
+		<%= junk.text_area( :podsumowanie, {cols: 60, rows: 10, placeholder: "Podaj koszty wykonanego serwisu... Po zatwierdzeniu informacje te zostaną przesłane automatycznie na maila: serwis@toropol.pl" }) %>
+		<br>
+		<br>
+		<%= junk.submit "Zatwierdź" %>
+	<% end %>
+
+</div>

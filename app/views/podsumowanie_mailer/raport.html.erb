@@ -1,0 +1,21 @@
+<html>
+	<head>
+		<meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+	</head>
+	<body>
+		<h3>Podsumowanie serwisu numer:</h3>
+		<%= "#{params[:service_sym][:numer]}" %>
+		<br>
+		<h4>Opis wykonanych czynności:</h4>
+		<%= "#{params[:podsum]}" %>
+		<br>
+		<h4>Nazwa klienta:</h4>
+		<%= "#{params[:service_sym][:klient]} #{params[:service_sym][:miasto]}" %>
+		<br>
+		<h4>Opis zgłoszenia:</h4>
+		<%= "#{params[:service_sym][:opis]}" %>
+		<br>
+		<h4>Przydział:</h4>
+		<%= "#{params[:service_sym][:przydzial]}" %>				
+	</body>
+</html>

@@ -1,0 +1,58 @@
+<div>
+	<h1 id="Title">Aktualne Zadania Serwisowe</h1>
+</div>
+
+<%= render partial: "navbar" %>
+<br>
+
+<div style="color: black;">
+	<table>
+		<tr>
+			<th>Zgłoszono</th>
+			<th style="width: 75px;">Numer</th>
+			<th>Status</th>
+			<th>Przydział</th>
+			<th>Firma</th>
+			<th>Miasto</th>
+			<th style="width: 350px;">Opis</th>
+			<th style="width: 250px;">Akcje</th>
+		</tr>
+
+			<% @services.each do |serw| %>
+				<% @dif = Time.now - serw.data_zgloszenia.to_datetime %>
+				<% dd, hh = @dif.divmod(86400) %>
+				
+				<tr>
+				  	<td><%= dd %> dni temu</td>
+				  	<td>
+				  		<a href="/services/<%= serw.id %>">
+				  			<%= serw.numer %>
+				  		</a>
+				  	</td>
+				  	<td><%= serw.status %></td>
+				  	<td><%= serw.przydzial %></td>
+				  	<td><%= serw.klient %></td>
+				  	<td><%= serw.miasto %></td>
+				  	<td style="white-space: pre-line"><%= serw.opis %></td>
+				  	<td>
+				  		<div id="akcje_tabela" style="margin: auto; width: 191px;">
+					  		<div id="akcja" style="float: left; padding: 3px; width: 75px; border: solid 2px green; text-align: center;">
+					  			<%= link_to "Edytuj", edit_service_path(serw) %>
+					  		</div>
+					  		<div id="akcja_pusta" style="float: left; padding: 3px; width: 15px; ">
+					  		</div>
+					  		<div id="akcja" style="float: left; padding: 3px; width: 75px; border: solid 2px green; text-align: center;">
+					  			<%= link_to "Zakończ", "/services/#{serw.id}/koniec" %>
+					  		</div>
+					  		<div style="clear: both; ">
+					  		</div>
+				  		</div>
+				  	</td>
+				  
+				</tr>				
+			<% end %>
+	</table>
+</div>
+
+
+

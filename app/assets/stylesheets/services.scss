@@ -1,0 +1,236 @@
+// Place all the styles related to the Services controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+
+
+.bottom_buttons
+{
+	background-color: #D3D7CF;
+	margin: auto;
+	width: 100px;
+	height: 25px;
+	padding-top: 5px;
+	text-align: center;
+	text-decoration: none;
+}
+
+#button_foot
+{
+	float: left;
+	/*display: inline-block;*/
+	margin: 0;
+	padding: 0;
+	margin-left: 5px;
+}
+
+#bottom_a
+{
+	width: 100px;
+	text-decoration: none;
+}
+
+a:hover > .bottom_buttons
+{
+	background-color: #BABDB6;
+	font-weight: bold;
+}
+
+body
+{
+	background-color: #555753;
+	color: white;
+	font-size: 12px;
+	margin: 0;
+}
+
+table a
+{
+	text-decoration: none;
+	font-size: 12px;
+	color: black;
+}
+
+table a:visited
+{
+	
+}
+
+table a:hover
+{
+	font-weight: bold;
+}
+
+
+table
+{
+	margin: auto;
+	text-align: center;
+}
+
+th,td
+{
+	padding: 15px;	
+}
+
+th
+{
+	background-color: #C9C9AD;
+}
+
+tr:nth-child(even)
+{
+	background-color:#749A3B;	
+}
+
+tr:nth-child(odd)
+{
+	background-color:#8EA966;	
+}
+
+.show_td
+{
+	font-weight: bold;
+	text-align: right;	
+}
+
+.err_mess
+{
+	font-size: 12px;
+	font-style: italic;
+	color: #CC5858;
+}
+
+#Title
+{
+	text-align: center;
+	color: #7894B3;
+}
+
+
+
+.nav
+{
+	
+	background-color: #7F8688;
+	text-align: center;
+	padding: 5px 0px;
+	margin: 0;
+	width: 100%;
+	height: 34px;
+}
+
+.nav > ul
+{
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+	font-size: 22px;
+	display: inline-block;
+}
+
+.nav > ul > li
+{	
+	border-right-style: dashed;
+	border-width: 1px;
+	border-color: #751b1b;
+	float: left;
+	height: 34px;
+	width: 150px;
+}
+
+.nav > ul li:hover
+{
+	background-color: #6e7577;
+}
+
+.nav > ul > li:hover > a
+{
+	color: #cfcfcf;
+}
+
+.nav > ul > li:first-child
+{
+	border-left-style: dashed;	
+	border-width: 1px;
+	border-color: #751b1b;
+}
+
+.nav > ul a 
+{
+	color: #ffffff;
+	font-size: 	14px;
+	text-decoration: none;
+}
+
+.nav > ul > li > ul
+{
+	list-style-type: none;
+	/*display: none;*/
+
+	padding: 0px;
+	margin: 0;
+	font-size: 20px;
+	display: none;
+}
+
+.nav > ul > li:hover > ul
+{
+	display: block;
+}
+
+.nav > ul > li > ul > li
+{	
+	background-color: #7F8688;
+	position: relative;
+	height: 28px;
+	width: 150px;
+	display: inline-block;
+	border-top-style: dashed;
+	border-width: 1px;
+	border-color: #751b1b;
+
+}
+
+.nav > ul > li > ul > li:hover > a
+{
+	color: #cfcfcf;
+}
+
+
+
+.form_container
+{
+	text-align: center;
+
+}
+
+.form
+{
+	display: inline-block;
+	
+	width: 25%;
+	text-align: left;
+
+	font-weight: bold;
+
+}
+
+.form input
+{
+	background-color: #D3D7CF;
+	height: 40px;
+	width: 100%;
+
+}
+
+.form input[type=submit]
+{
+	width: auto;
+}
+
+.form label
+{
+	color: #D3D7CF;
+}
+

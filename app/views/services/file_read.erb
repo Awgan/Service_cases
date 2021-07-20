@@ -1,0 +1,10 @@
+<%= render partial: "navbar" %>
+<br>
+	<h4>Zawartość pliku:</h4>
+	<p style="color: white;">		
+		<% @file_data.each do |str| %>
+			<%= "#{str}" %>
+			<br>
+			<br>
+		<% end %>
+	</p>
